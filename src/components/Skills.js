@@ -27,8 +27,8 @@ function Skills() {
     //     </Row>
     //   </Container>
     // </section>
-    <div className='container-fluid p-4'>
-       <div className="p-4 sm:p-8">
+    <section className='container p-0 my-2'>
+       <div className="sm:p-8">
       <h2 className="text-2xl font-bold mb-6">Technical Skills</h2>
       <div className="grid gap-6 md:grid-cols-2">
          {Object.entries(skills).map(([category, items]) => (
@@ -43,7 +43,7 @@ function Skills() {
          ))}
        </div>
      </div>
-     </div>
+     </section>
   );
 }
 

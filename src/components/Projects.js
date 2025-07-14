@@ -63,11 +63,11 @@ const projects = [
 
 function Projects() {
   return (
-    <section className="container py-5" id="projects">
+    <section className="container py-2 px-0 my-2" id="projects">
     <h2 className="text-center mb-4">Projects</h2>
     <div className="row g-4">
       {projects.map((project, idx) => (
-        <div key={idx} className="col-md-6">
+        <div key={idx} className="col-md-6 s:mx-2">
           <div className="card h-100">
             <div className="card-body">
               <h5 className="card-title text-primary">{project.title}</h5>
