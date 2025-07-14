@@ -42,7 +42,7 @@ const projects = [
     client: "Falcon Games, Kuwait",
     role: "UI Designer",
     teamSize: 4,
-    website: "https://www.gamessouk.com",
+    website: "",
     details: [
       "Designed responsive pages using HTML5 and CSS3.",
       "Validated UI modules and presented to clients in agile calls."
@@ -53,7 +53,7 @@ const projects = [
     client: "Internal",
     role: "UI Designer",
     teamSize: 4,
-    website: "https://www.thefaceshop.com",
+    website: "",
     details: [
       "Created web pages using PHP, HTML5, CSS3.",
       "Conducted testing and resolved UI bugs before delivery."
