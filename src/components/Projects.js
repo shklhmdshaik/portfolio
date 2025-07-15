@@ -4,61 +4,35 @@ import { Card, Col, Container, Row } from 'react-bootstrap';
 const projects = [
   {
     title: "Learning Management System (LMS)",
-    client: "Educator, CareerSmith",
-    role: "React JS Developer",
-    teamSize: 2,
-    website: "",
     details: [
-      "Built scalable LMS platform with course management and quizzes.",
-      "Used React.js, Context API, and secure routing.",
-      "Integrated with backend APIs and handled unit testing."
+      "A learning management system (LMS) is a software application used in schools to manage, deliver, and track educational courses, training programs, or learning and development programs"
     ]
   },
   {
     title: "Clinical Trials",
-    client: "Cognizant",
-    role: "React JS Developer",
-    teamSize: 4,
-    website: "",
     details: [
-      "Developed responsive UI using ReactJS and Bootstrap.",
-      "Built reusable components and tested modules.",
-      "Collaborated with backend developers."
+      "The Clinical and Translational Science (CTS) Program is designed for trainees who seek to affect the translation of research into improved clinical care and public health."
     ]
   },
   {
     title: "Shared Investigator Platform",
-    client: "Cognizant",
-    role: "UI Developer",
-    teamSize: 4,
-    website: "",
     details: [
-      "Used HTML, CSS, Bootstrap, jQuery for building user-facing features.",
-      "Conducted unit testing and collaborated with backend team."
+      'The Shared Investigator Platform or ("SIP") is a shared platform that allows multiple participating clinical trial sponsors ("SIP Sponsors") to communicate directly with participating sites, investigators, and other users at participating sites while conducting clinical trials. The SIP also makes it easier for clinical trial sites, investigators and other users at participating sites to participate in trials by enabling them to enter required information once and allowing site users to choose to have that information be visible to multiple study sponsors.'
     ]
   },
   {
     title: "Gamessouk",
-    client: "Falcon Games, Kuwait",
-    role: "UI Designer",
-    teamSize: 4,
-    website: "",
     details: [
-      "Designed responsive pages using HTML5 and CSS3.",
-      "Validated UI modules and presented to clients in agile calls."
-    ]
-  },
-  {
-    title: "The Face Shop",
-    client: "Internal",
-    role: "UI Designer",
-    teamSize: 4,
-    website: "",
-    details: [
-      "Created web pages using PHP, HTML5, CSS3.",
-      "Conducted testing and resolved UI bugs before delivery."
+      "Gamessouk is an online store specializing in the sale of video games, gaming accessories, and related products"
     ]
   }
+  // {
+  //   title: "The Face Shop",
+  //   details: [
+  //     "Created web pages using PHP, HTML5, CSS3.",
+  //     "Conducted testing and resolved UI bugs before delivery."
+  //   ]
+  // }
 ];
 
 function Projects() {
@@ -75,14 +49,14 @@ function Projects() {
                 <strong>Client:</strong> {project.client}<br />
                 <strong>Role:</strong> {project.role} | <strong>Team Size:</strong> {project.teamSize}
               </p> */}
-              {project.website && (
+              {/* {project.website && (
                 <a href={project.website} target="_blank" rel="noopener noreferrer" className="d-block mb-2">
                   Visit Website
                 </a>
-              )}
-              <ul>
-                {project.details.map((point, i) => <li key={i}>{point}</li>)}
-              </ul>
+              )} */}
+              <div>
+                {project.details.map((point, i) => <p key={i}>{point}</p>)}
+              </div>
             </div>
           </div>
         </div>
