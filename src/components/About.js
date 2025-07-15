@@ -3,7 +3,7 @@ import { Container } from 'react-bootstrap';
 
 function About() {
   return (
-    <section id="about" className="container p-4 border rounded-2xl shadow py-5 my-2">
+    <section id="about" className="container p-4 shadow py-5 my-5 max-w-90">
      
         <h2>About Me</h2>
         <p>Front End Developer with over 5 years of hands-on experience in building responsive, user-friendly, and scalable web applications using HTML5, CSS3, ReactJS, JavaScript, and jQuery. Passionate about creating seamless user experiences and clean, maintainable code.

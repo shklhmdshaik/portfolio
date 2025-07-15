@@ -3,7 +3,7 @@ import { Container, Nav, Navbar } from 'react-bootstrap';
 
 function PortfolioNavbar() {
   return (
-    <Navbar bg="dark" variant="dark" expand="lg" fixed="top">
+    <Navbar variant="dark" expand="lg" fixed="top" className='nav-container mb-1 position-sticky mt-2 mx-auto max-w-90'>
       <Container>
         <Navbar.Brand href="#home">Shakeel Ahmed</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />

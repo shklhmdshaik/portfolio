@@ -63,18 +63,18 @@ const projects = [
 
 function Projects() {
   return (
-    <section className="container py-2 px-0 my-2" id="projects">
+    <section className="container py-2 px-0 my-5 max-w-90 opacity-75" id="projects">
     <h2 className="text-center mb-4">Projects</h2>
     <div className="row g-4">
       {projects.map((project, idx) => (
         <div key={idx} className="col-md-6 s:mx-2">
-          <div className="card h-100">
+          <div className="card h-100 shadow">
             <div className="card-body">
-              <h5 className="card-title text-primary">{project.title}</h5>
-              <p className="card-text">
+              <h5 className="card-title">{project.title}</h5>
+              {/* <p className="card-text">
                 <strong>Client:</strong> {project.client}<br />
                 <strong>Role:</strong> {project.role} | <strong>Team Size:</strong> {project.teamSize}
-              </p>
+              </p> */}
               {project.website && (
                 <a href={project.website} target="_blank" rel="noopener noreferrer" className="d-block mb-2">
                   Visit Website
