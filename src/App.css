@@ -14,7 +14,6 @@ body{
 .card{
   background-color: #08233b !important;
   color:inherit !important;
-;
 }
 .nav-container{
   top:0;
@@ -23,6 +22,9 @@ body{
 }
 a{
   color: inherit !important;
+}
+.bg-color{
+  background-color: #09263e;
 }
 .max-w-90{
   max-width: 90% !important;

@@ -3,7 +3,7 @@ import { Button, Container, Form } from 'react-bootstrap';
 
 function Contact() {
   return (
-    <section id="contact" className="container p-4 shadow py-5 my-5 max-w-90">
+    <section id="contact" className="container p-4 shadow py-5 my-5 max-w-90 text-center">
       <Container>
         <h2>Contact Me</h2>
         <p>Mob.No: 971 581683831</p>
