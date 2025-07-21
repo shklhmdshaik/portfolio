@@ -36,7 +36,7 @@ a{
 .rotate-hover:hover, .skill-container-elem:hover{
 transform: translateY(-10px) scale(1.1);
 }
-/* footer{
-  background-color: #09263e !important;
-} */
+footer{
+  background-color: #070a10 !important;
+}
 
