@@ -7,36 +7,36 @@ body{
   position: relative;
   font-weight: normal;
   overflow-x: hidden;
-  background-color: #08233b !important;
+  /* background-color: #08233b !important; */
+  background-color: #090e1a !important;
   color:#fff !important;
   scroll-behavior: smooth;
 }
 .card{
-  background-color: #08233b !important;
+  background-color: #090e1a !important;
   color:inherit !important;
 }
 .nav-container{
   top:0;
   z-index: 9999;
-  background-color: #09263e !important;
+  background-color: #070a10 !important; 
 }
 a{
   color: inherit !important;
 }
 .bg-color{
-  background-color: #09263e;
+  background-color: #090e1a;
 }
 .max-w-90{
   max-width: 90% !important;
 }
-.rotate-hover{
+.rotate-hover, .skill-container-elem{
   transition: transform 0.5s ease-in-out;
-    display: inline-block;
 }
-.rotate-hover:hover{
+.rotate-hover:hover, .skill-container-elem:hover{
 transform: translateY(-10px) scale(1.1);
 }
-footer{
+/* footer{
   background-color: #09263e !important;
-}
+} */
 

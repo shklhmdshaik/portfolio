@@ -20,14 +20,14 @@ const projects = [
     title: "Shared Investigator Platform",
     stack: ["jQuery", "javascript", "CSS", "Bootstrap"],
     details: [
-      'The Shared Investigator Platform or ("SIP") is a shared platform that allows multiple participating clinical trial sponsors ("SIP Sponsors") to communicate directly with participating sites, investigators, and other users at participating sites while conducting clinical trials. The SIP also makes it easier for clinical trial sites, investigators and other users at participating sites to participate in trials by enabling them to enter required information once and allowing site users to choose to have that information be visible to multiple study sponsors.'
+      'The Shared Investigator Platform or ("SIP") is a shared platform that allows multiple participating clinical trial sponsors ("SIP Sponsors") to communicate directly with participating sites, investigators, and other users at participating sites while conducting clinical trials.'
     ]
   },
   {
     title: "Gamessouk",
     stack: ["jQuery", "Javascript", "CSS", "Bootstrap"],
     details: [
-      "Gamessouk is an online store specializing in the sale of video games, gaming accessories, and related products"
+      "Gamessouk is an online store specializing in the sale of video games, gaming accessories, and related products.Get games at the best price in Kuwait. Gather the family for fun, competitive gameplay with a wide selection of popular and new games."
     ]
   }
 
@@ -36,7 +36,7 @@ const projects = [
 function Projects() {
   return (
     <section className="container py-2 px-0 my-5 max-w-90 opacity-75" id="projects">
-    <h2 className="text-center mb-4">Projects</h2>
+    <h2 className="mb-4">Projects</h2>
     <div className="row g-4">
       {projects.map((project, idx) => (
         <div key={idx} className="col-md-6 s:mx-2">

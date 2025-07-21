@@ -16,20 +16,22 @@ const skills = {
 function Skills() {
   return (
    
-    <section id="skills" className='container p-0 my-5 max-w-90'>
+    <section id="skills" className='container p-0 my-5 max-w-90 skill-container'>
        <div className="sm:p-8">
       <h2 className="text-2xl font-bold mb-6">Technical Skills</h2>
-      <div className="grid gap-6 md:grid-cols-2">
+      <div className='row'>
+      <div className="d-block d-md-flex justify-content-between">
          {Object.entries(skills).map(([category, items]) => (
-           <div key={category} className="p-4 shadow">
-             <h3 className="font-semibold text-lg mb-2">{category}</h3>
-             <ul className="list-disc list-inside space-y-1 text-sm">
+           <div key={category} className="p-4 shadow skill-container-elem" style={{minWidth: "200px"}}>
+             <h3 className="font-semibold text-lg mb-2 text-center">{category}</h3>
+             <ul className="list-disc list-inside space-y-1 text-sm list-unstyled">
                {items.map((skill) => (
-                 <li key={skill}>{skill}</li>
+                 <li key={skill} className='text-center'>{skill}</li>
                ))}
              </ul>
            </div>
          ))}
+       </div>
        </div>
      </div>
      </section>
