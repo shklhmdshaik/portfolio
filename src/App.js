@@ -11,15 +11,15 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-       <>
-       <PortfolioNavbar />
+    <div>
+      <PortfolioNavbar />
       <Hero />
       <About />
       <Skills />
       <Projects />
       <Contact />
       <Footer />
-    </>
+    </div>
   );
 }
 

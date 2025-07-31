@@ -3,7 +3,7 @@ import { Container, Nav, Navbar } from 'react-bootstrap';
 
 function PortfolioNavbar() {
   const [expanded, setExpanded] = useState(false);
-
+  
   const handleNavClick = () => {
     setExpanded(false); // close menu when any link is clicked
   };
