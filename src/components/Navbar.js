@@ -9,7 +9,7 @@ function PortfolioNavbar() {
   };
   return (
     <Navbar expanded={expanded} variant="dark" expand="lg" fixed="top" className='nav-container mb-1 position-sticky mt-2 mx-auto'>
-      <Container fluid>
+      <Container className='max-w-90'>
         <Navbar.Brand href="#home">Shakeel Ahmed</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={() => setExpanded(prev => !prev)} />
         <Navbar.Collapse id="basic-navbar-nav" >
