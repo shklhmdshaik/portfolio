@@ -35,7 +35,7 @@ const projects = [
 
 function Projects() {
   return (
-    <section className="container py-2 px-0 my-5 max-w-90 opacity-75" id="projects">
+    <section className="container py-2 px-0 my-5 max-w-90 opacity-75 project-section" id="projects">
     <h2 className="mb-4">Projects</h2>
     <div className="row g-4">
       {projects.map((project, idx) => (

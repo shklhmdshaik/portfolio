@@ -3,7 +3,7 @@ import { Container } from 'react-bootstrap';
 
 function About() {
   return (
-    <section id="about" className="container max-w-90">
+    <section id="about" className="container max-w-90 about-setion">
 
       <h2 className='text-2xl font-bold mb-6'>About Me</h2>
       <div className="p-4 shadow py-2 my-2 max-w-90">

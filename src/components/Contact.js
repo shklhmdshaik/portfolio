@@ -3,7 +3,7 @@ import { Button, Container, Form } from 'react-bootstrap';
 
 function Contact() {
   return (
-    <section id="contact" className="container max-w-90">
+    <section id="contact" className="container max-w-90 contact-section">
       <h2>Contact Me</h2>
       <Container className='shadow py-2 my-2'>
         <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-phone" viewBox="0 0 16 16">
