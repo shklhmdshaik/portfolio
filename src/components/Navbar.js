@@ -8,7 +8,7 @@ function PortfolioNavbar() {
     setExpanded(false); // close menu when any link is clicked
   };
   return (
-    <Navbar expanded={expanded} variant="dark" expand="lg" fixed="top" className='nav-container mb-1 position-sticky mt-2 mx-auto'>
+    <Navbar expanded={expanded} variant="dark" expand="lg" fixed="top" className='nav-container mb-1 position-sticky mx-auto'>
       <Container className='max-w-90'>
         <Navbar.Brand href="#home">Shakeel Ahmed</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={() => setExpanded(prev => !prev)} />
