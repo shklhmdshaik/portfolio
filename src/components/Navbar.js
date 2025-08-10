@@ -1,19 +1,21 @@
 import React, { useState } from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
+import logo from "../assets/images/shakeel_logo.png"
 
 function PortfolioNavbar() {
   const [expanded, setExpanded] = useState(false);
   const [activeLink, setActiveLink] = useState("About");
   
-  const handleNavClick = (index) => {
+  const handleNavClick = (link) => {
     setExpanded(false);
-    setActiveLink(prev=>!prev);
+    setActiveLink(link);
+   
   };
 
   return (
     <Navbar expanded={expanded} variant="dark" expand="lg" fixed="top" className='nav-container mb-1 position-sticky mx-auto'>
       <Container className='max-w-90'>
-        <Navbar.Brand href="#home">Shakeel Ahmed</Navbar.Brand>
+        <Navbar.Brand href="#home"><img src={logo} alt="Logo" className="logo" /> Shakeel Ahmed</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={() => setExpanded(prev => !prev)} />
         <Navbar.Collapse id="basic-navbar-nav" >
             <Nav className="ms-auto">
