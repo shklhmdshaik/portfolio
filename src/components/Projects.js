@@ -1,60 +1,168 @@
-import React from 'react';
-
-
-const projects = [
-  {
-    title: "Learning Management System (LMS)",
-    stack: ["React.js", "javascript", "CSS", "Bootstrap"],
-    details: [
-      "A learning management system (LMS) is a software application used in schools to manage, deliver, and track educational courses, training programs, or learning and development programs"
-    ]
-  },
-  {
-    title: "Clinical Trials",
-    stack: ["React.js", "javascript", "Bootstrap", "CSS"],
-    details: [
-      "The Clinical and Translational Science (CTS) Program is designed for trainees who seek to affect the translation of research into improved clinical care and public health."
-    ]
-  },
-  {
-    title: "Shared Investigator Platform",
-    stack: ["jQuery", "javascript", "CSS", "Bootstrap"],
-    details: [
-      'The Shared Investigator Platform or ("SIP") is a shared platform that allows multiple participating clinical trial sponsors ("SIP Sponsors") to communicate directly with participating sites, investigators, and other users at participating sites while conducting clinical trials.'
-    ]
-  },
-  {
-    title: "Gamessouk",
-    stack: ["jQuery", "Javascript", "CSS", "Bootstrap"],
-    details: [
-      "Gamessouk is an online store specializing in the sale of video games, gaming accessories, and related products.Get games at the best price in Kuwait. Gather the family for fun, competitive gameplay with a wide selection of popular and new games."
-    ]
-  }
-
-];
+import React, { useState, useMemo, useCallback } from "react";
+import { Container, Row, Col } from "react-bootstrap";
+import { PROJECTS_DATA, UI_LABELS } from "../constants/portfolioData";
+import SectionHeader from "./common/SectionHeader";
+import SectionWrapper from "./common/SectionWrapper";
+import ProjectModal from "./common/ProjectModal";
+import Icon from "./common/Icon";
 
 function Projects() {
+  const [activeFilter, setActiveFilter] = useState(
+    PROJECTS_DATA.filterCategories[0]
+  );
+  const [searchQuery, setSearchQuery] = useState("");
+  const [selectedProject, setSelectedProject] = useState(null);
+
+  const filteredProjects = useMemo(() => {
+    const normalizedQuery = searchQuery.trim().toLowerCase();
+
+    return PROJECTS_DATA.items.filter((project) => {
+      const matchesCategory =
+        activeFilter === PROJECTS_DATA.filterCategories[0] ||
+        project.filterTags?.includes(activeFilter) ||
+        project.category === activeFilter;
+
+      if (!matchesCategory) return false;
+      if (!normalizedQuery) return true;
+
+      const inTitle = project.title.toLowerCase().includes(normalizedQuery);
+      const inDesc = project.description
+        .toLowerCase()
+        .includes(normalizedQuery);
+      const inStack = project.stack.some((tech) =>
+        tech.toLowerCase().includes(normalizedQuery)
+      );
+
+      return inTitle || inDesc || inStack;
+    });
+  }, [activeFilter, searchQuery]);
+
+  const handleResetFilters = useCallback(() => {
+    setActiveFilter(PROJECTS_DATA.filterCategories[0]);
+    setSearchQuery("");
+  }, []);
+
   return (
-    <section className="container py-2 px-0 my-5 max-w-90 opacity-75 project-section" id="projects">
-    <h2 className="mb-4">Projects</h2>
-    <div className="row g-4">
-      {projects.map((project, idx) => (
-        <div key={idx} className="col-md-6 s:mx-2">
-          <div className="card h-100 shadow">
-            <div className="card-body">
-              <h5 className="card-title">{project.title}</h5>
-              <div>
-                {project.details.map((point, i) => <p key={i}>{point}</p>)}
-              </div>
-              <div className='d-lg-flex d-md-block'> 
-                {project.stack.map((point, i) => <p key={i} className='me-4 border px-3 py-2 bg-color rounded-2 text-light fw-bold'> {point}</p>)}
-              </div>
-            </div>
+    <SectionWrapper id={PROJECTS_DATA.sectionId}>
+      <Container>
+        <SectionHeader
+          badge={PROJECTS_DATA.badge}
+          title={PROJECTS_DATA.title}
+          subtitle={PROJECTS_DATA.subtitle}
+        />
+
+        <div className="d-flex flex-column flex-lg-row justify-content-between align-items-stretch align-items-lg-center gap-3 mb-4">
+          <div
+            className="d-flex flex-wrap gap-2"
+            role="tablist"
+            aria-label="Project category filters"
+          >
+            {PROJECTS_DATA.filterCategories.map((category) => (
+              <button
+                key={category}
+                type="button"
+                role="tab"
+                aria-selected={activeFilter === category}
+                onClick={() => setActiveFilter(category)}
+                className={`filter-tab-btn ${
+                  activeFilter === category ? "active" : ""
+                }`}
+              >
+                {category}
+              </button>
+            ))}
+          </div>
+
+          <div className="project-search-box">
+            <span className="project-search-icon">
+              <Icon name="search" size={15} />
+            </span>
+            <input
+              type="search"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              placeholder={UI_LABELS.projects.searchPlaceholder}
+              aria-label={UI_LABELS.projects.searchPlaceholder}
+              className="project-search-input"
+            />
           </div>
         </div>
-      ))}
-    </div>
-  </section>
+
+        {filteredProjects.length === 0 ? (
+          <div className="surface-card p-5 text-center">
+            <p className="project-description mb-3">
+              {UI_LABELS.projects.emptyState}
+            </p>
+            <button
+              type="button"
+              onClick={handleResetFilters}
+              className="btn-outline-subtle py-2 px-4"
+            >
+              {UI_LABELS.projects.resetFilterBtn}
+            </button>
+          </div>
+        ) : (
+          <Row className="g-4">
+            {filteredProjects.map((project) => (
+              <Col xs={12} lg={6} key={project.id}>
+                <article className="surface-card surface-card-interactive h-100 p-4 d-flex flex-column justify-content-between">
+                  <div>
+                    <div className="d-flex justify-content-between align-items-start gap-2 mb-2">
+                      <span className="project-category-badge">
+                        {project.category}
+                      </span>
+                    </div>
+
+                    <h3 className="project-title mt-2 mb-2">{project.title}</h3>
+                    <p className="project-description mb-3">
+                      {project.description}
+                    </p>
+
+                    {project.highlights?.length > 0 && (
+                      <ul className="list-unstyled mb-4 d-flex flex-column gap-2">
+                        {project.highlights.map((highlight, index) => (
+                          <li key={index} className="project-highlight-item">
+                            <span className="project-highlight-icon">
+                              <Icon name="checkCircle" size={15} />
+                            </span>
+                            <span>{highlight}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+
+                  <div>
+                    <div className="d-flex flex-wrap gap-2 pb-3 mb-3 border-bottom border-secondary border-opacity-25">
+                      {project.stack.map((tech) => (
+                        <span key={tech} className="tech-tag">
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+
+                    <button
+                      type="button"
+                      onClick={() => setSelectedProject(project)}
+                      className="case-study-btn w-100"
+                    >
+                      <span>{UI_LABELS.projects.viewDetailsBtn}</span>
+                      <Icon name="arrowUpRight" size={15} />
+                    </button>
+                  </div>
+                </article>
+              </Col>
+            ))}
+          </Row>
+        )}
+
+        <ProjectModal
+          project={selectedProject}
+          show={Boolean(selectedProject)}
+          onHide={() => setSelectedProject(null)}
+        />
+      </Container>
+    </SectionWrapper>
   );
 }
 
