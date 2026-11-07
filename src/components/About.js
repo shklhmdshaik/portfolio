@@ -1,19 +1,74 @@
-import React from 'react';
-import { Container } from 'react-bootstrap';
+import React from "react";
+import { Container, Row, Col } from "react-bootstrap";
+import { ABOUT_DATA } from "../constants/portfolioData";
+import SectionHeader from "./common/SectionHeader";
+import SectionWrapper from "./common/SectionWrapper";
+import Icon from "./common/Icon";
 
 function About() {
   return (
-    <section id="about" className="container max-w-90 about-setion">
+    <SectionWrapper id={ABOUT_DATA.sectionId}>
+      <Container>
+        <SectionHeader
+          badge={ABOUT_DATA.badge}
+          title={ABOUT_DATA.title}
+          subtitle={ABOUT_DATA.subtitle}
+        />
 
-      <h2 className='text-2xl font-bold mb-6'>About Me</h2>
-      <div className="p-4 shadow py-2 my-2 max-w-90">
-        <p>Front End Developer with over 5 years of hands-on experience in building responsive, user-friendly, and scalable web applications using HTML5, CSS3, ReactJS, JavaScript, and jQuery. Passionate about creating seamless user experiences and clean, maintainable code.
+        <div className="surface-card p-4 p-md-5 mb-4">
+          <Row className="g-4 align-items-center">
+            <Col xs={12} lg={7}>
+              {ABOUT_DATA.paragraphs.map((paragraph, index) => (
+                <p
+                  key={index}
+                  className={
+                    index === ABOUT_DATA.paragraphs.length - 1
+                      ? "mb-0 about-paragraph"
+                      : "mb-3 about-paragraph"
+                  }
+                >
+                  {paragraph}
+                </p>
+              ))}
+            </Col>
 
-          Proven ability to quickly adapt to new technologies and development environments. Experienced in working in Agile/Scrum teams, contributing effectively to all phases of the development lifecycle. Strong communication and collaboration skills with a focus on continuous improvement and learning.
+            <Col xs={12} lg={5}>
+              <Row className="g-3">
+                {ABOUT_DATA.highlights.map((stat) => (
+                  <Col xs={6} key={stat.label}>
+                    <div className="stat-card">
+                      <div className="stat-value">{stat.value}</div>
+                      <div className="stat-label fw-semibold">{stat.label}</div>
+                      {stat.detail && (
+                        <div className="stat-detail mt-1">{stat.detail}</div>
+                      )}
+                    </div>
+                  </Col>
+                ))}
+              </Row>
+            </Col>
+          </Row>
+        </div>
 
-          Always eager to take on new challenges, innovate, and deliver high-quality front-end solutions that drive business impact.</p>
-      </div>
-    </section>
+        {ABOUT_DATA.pillars?.length > 0 && (
+          <Row className="g-4">
+            {ABOUT_DATA.pillars.map((pillar) => (
+              <Col xs={12} md={4} key={pillar.id}>
+                <div className="surface-card surface-card-interactive h-100 p-4">
+                  <div className="skill-category-icon mb-3">
+                    <Icon name={pillar.icon} size={20} />
+                  </div>
+                  <h3 className="pillar-title mb-2">{pillar.title}</h3>
+                  <p className="pillar-description mb-0">
+                    {pillar.description}
+                  </p>
+                </div>
+              </Col>
+            ))}
+          </Row>
+        )}
+      </Container>
+    </SectionWrapper>
   );
 }
 

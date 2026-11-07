@@ -1,30 +1,250 @@
-import React from 'react';
-import { Button, Container, Form } from 'react-bootstrap';
+import React, { useState, useCallback } from "react";
+import { Container, Row, Col } from "react-bootstrap";
+import { CONTACT_DATA, UI_LABELS } from "../constants/portfolioData";
+import SectionHeader from "./common/SectionHeader";
+import SectionWrapper from "./common/SectionWrapper";
+import Icon from "./common/Icon";
+import { useClipboard } from "../hooks/useClipboard";
+
+const INITIAL_FORM = {
+  name: "",
+  email: "",
+  subject: "",
+  message: "",
+};
 
 function Contact() {
+  const { copiedKey, copyToClipboard } = useClipboard();
+  const [formData, setFormData] = useState(INITIAL_FORM);
+  const [status, setStatus] = useState({ type: "", text: "" });
+
+  const handleInputChange = useCallback((e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+    setStatus({ type: "", text: "" });
+  }, []);
+
+  const handleSubmit = useCallback(
+    (e) => {
+      e.preventDefault();
+      const { name, email, subject, message } = formData;
+      if (!name.trim() || !email.trim() || !message.trim()) {
+        setStatus({
+          type: "error",
+          text: UI_LABELS.contact.validationError,
+        });
+        return;
+      }
+
+      const mailSubject = encodeURIComponent(
+        subject.trim() || `Portfolio Inquiry from ${name.trim()}`
+      );
+      const mailBody = encodeURIComponent(
+        `Name: ${name.trim()}\nEmail: ${email.trim()}\n\n${message.trim()}`
+      );
+
+      setStatus({
+        type: "success",
+        text: UI_LABELS.contact.successMessage,
+      });
+
+      if (typeof window !== "undefined") {
+        window.location.href = `mailto:${CONTACT_DATA.directEmail}?subject=${mailSubject}&body=${mailBody}`;
+      }
+      setFormData(INITIAL_FORM);
+    },
+    [formData]
+  );
+
+  const { fields } = UI_LABELS.contact;
+
   return (
-    <section id="contact" className="container max-w-90 contact-section">
-      <h2>Contact Me</h2>
-      <Container className='shadow py-2 my-2'>
-        <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-phone" viewBox="0 0 16 16">
-          <path d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
-          <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
-        </svg>
-          &nbsp;: &nbsp; 971 581683831</p>
-        <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
-          <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z" />
-        </svg>
-          &nbsp;: &nbsp;shklhmdshaik@gmail.com</p>
-        <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
-          <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
-        </svg>&nbsp;: &nbsp;
-          <a href="https://www.linkedin.com/in/shakeel-ahmed-8aab09197/">linkedin.com/in/shakeel</a></p>
-        <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
-          <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" />
-        </svg>&nbsp;: &nbsp;
-          <a href="https://github.com/shklhmdshaik">github.com/in/shakeel</a></p>
+    <SectionWrapper id={CONTACT_DATA.sectionId}>
+      <Container>
+        <SectionHeader
+          badge={CONTACT_DATA.badge}
+          title={CONTACT_DATA.title}
+          subtitle={CONTACT_DATA.subtitle}
+        />
+
+        <Row className="g-4 align-items-stretch">
+          <Col xs={12} lg={5}>
+            <div className="d-flex flex-column gap-3 h-100">
+              {CONTACT_DATA.methods.map((method) => {
+                const isCopied = copiedKey === method.id;
+
+                return (
+                  <div
+                    key={method.id}
+                    className="surface-card surface-card-interactive p-3 px-4 d-flex align-items-center justify-content-between gap-3"
+                  >
+                    <a
+                      href={method.href}
+                      target={method.isExternal ? "_blank" : undefined}
+                      rel={
+                        method.isExternal ? "noopener noreferrer" : undefined
+                      }
+                      className="d-flex align-items-center gap-3 text-decoration-none flex-grow-1 min-w-0"
+                    >
+                      <div className="contact-icon-box">
+                        <Icon name={method.icon} size={20} />
+                      </div>
+                      <div className="min-w-0">
+                        <div className="contact-label">{method.label}</div>
+                        <div className="contact-value text-truncate">
+                          {method.value}
+                        </div>
+                      </div>
+                    </a>
+
+                    {method.canCopy ? (
+                      <button
+                        type="button"
+                        onClick={() =>
+                          copyToClipboard(method.copyValue, method.id)
+                        }
+                        aria-label={`${UI_LABELS.contact.copyText} ${method.label}`}
+                        className={`copy-action-btn ${
+                          isCopied ? "copied" : ""
+                        }`}
+                      >
+                        <Icon name={isCopied ? "check" : "copy"} size={14} />
+                        <span>
+                          {isCopied
+                            ? UI_LABELS.contact.copiedText
+                            : UI_LABELS.contact.copyText}
+                        </span>
+                      </button>
+                    ) : (
+                      <a
+                        href={method.href}
+                        target={method.isExternal ? "_blank" : undefined}
+                        rel={
+                          method.isExternal ? "noopener noreferrer" : undefined
+                        }
+                        className="copy-action-btn text-decoration-none"
+                      >
+                        <span>{UI_LABELS.contact.openLinkText}</span>
+                        <Icon name="arrowUpRight" size={14} />
+                      </a>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+          </Col>
+
+          <Col xs={12} lg={7}>
+            <div className="surface-card p-4 p-md-5 h-100">
+              <h3 className="project-title mb-1">
+                {UI_LABELS.contact.formTitle}
+              </h3>
+              <p className="project-description mb-4">
+                {UI_LABELS.contact.formSubtitle}
+              </p>
+
+              <form onSubmit={handleSubmit} noValidate>
+                <Row className="g-3">
+                  <Col xs={12} sm={6}>
+                    <label htmlFor="contact-name" className="form-label-custom">
+                      {fields.nameLabel} *
+                    </label>
+                    <input
+                      id="contact-name"
+                      name="name"
+                      type="text"
+                      required
+                      value={formData.name}
+                      onChange={handleInputChange}
+                      placeholder={fields.namePlaceholder}
+                      className="form-input-custom"
+                    />
+                  </Col>
+
+                  <Col xs={12} sm={6}>
+                    <label
+                      htmlFor="contact-email"
+                      className="form-label-custom"
+                    >
+                      {fields.emailLabel} *
+                    </label>
+                    <input
+                      id="contact-email"
+                      name="email"
+                      type="email"
+                      required
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      placeholder={fields.emailPlaceholder}
+                      className="form-input-custom"
+                    />
+                  </Col>
+
+                  <Col xs={12}>
+                    <label
+                      htmlFor="contact-subject"
+                      className="form-label-custom"
+                    >
+                      {fields.subjectLabel}
+                    </label>
+                    <input
+                      id="contact-subject"
+                      name="subject"
+                      type="text"
+                      value={formData.subject}
+                      onChange={handleInputChange}
+                      placeholder={fields.subjectPlaceholder}
+                      className="form-input-custom"
+                    />
+                  </Col>
+
+                  <Col xs={12}>
+                    <label
+                      htmlFor="contact-message"
+                      className="form-label-custom"
+                    >
+                      {fields.messageLabel} *
+                    </label>
+                    <textarea
+                      id="contact-message"
+                      name="message"
+                      rows={4}
+                      required
+                      value={formData.message}
+                      onChange={handleInputChange}
+                      placeholder={fields.messagePlaceholder}
+                      className="form-input-custom"
+                    />
+                  </Col>
+
+                  {status.text && (
+                    <Col xs={12}>
+                      <div
+                        role="alert"
+                        className={`form-status-banner ${
+                          status.type === "error"
+                            ? "status-error"
+                            : "status-success"
+                        }`}
+                      >
+                        {status.text}
+                      </div>
+                    </Col>
+                  )}
+
+                  <Col xs={12}>
+                    <button type="submit" className="btn-accent">
+                      <Icon name="send" size={15} />
+                      <span>{UI_LABELS.contact.submitBtn}</span>
+                    </button>
+                  </Col>
+                </Row>
+              </form>
+            </div>
+          </Col>
+        </Row>
       </Container>
-    </section>
+    </SectionWrapper>
   );
 }
 
