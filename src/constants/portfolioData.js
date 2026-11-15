@@ -3,8 +3,8 @@ import brandLogo from "../assets/images/shakeel_logo.png";
 
 export const SITE_METADATA = {
   brandName: "Shakeel Ahmed",
-  fullName: "Shaik Shakeel Ahmed",
-  roleTitle: "Senior Front-End, Next.js & React.js Developer",
+  fullName: "Shakeel Ahmed",
+  roleTitle: "React JS Developer | Front End Developer",
   logo: brandLogo,
   logoAlt: "Shakeel Ahmed Logo",
   defaultTheme: "dark",
@@ -28,12 +28,12 @@ export const UI_LABELS = {
   projects: {
     allFilter: "All Projects",
     searchPlaceholder: "Filter by project name or technology...",
-    viewDetailsBtn: "View Architecture & Case Study",
+    viewDetailsBtn: "View Project Details",
     emptyState: "No projects match the selected filter criteria.",
     resetFilterBtn: "Reset Filters",
     modalLabels: {
       overview: "Project Overview",
-      architecture: "Architecture & Engineering Contributions",
+      architecture: "Key Features & Contributions",
       deliverables: "Key Deliverables & Impact",
       techStack: "Technology Stack",
       closeBtn: "Close",
@@ -56,7 +56,7 @@ export const UI_LABELS = {
       emailLabel: "Your Email",
       emailPlaceholder: "e.g., sarah@company.com",
       subjectLabel: "Subject",
-      subjectPlaceholder: "e.g., Senior React.js / Next.js Opportunity",
+      subjectPlaceholder: "e.g., React JS / Front End Developer Opportunity",
       messageLabel: "Message",
       messagePlaceholder:
         "Hi Shakeel, I came across your portfolio and would love to discuss a role...",
@@ -76,24 +76,26 @@ export const UI_LABELS = {
 
 export const HERO_DATA = {
   sectionId: "home",
-  greetingBadge: "6+ Years Experience • Dubai, UAE • Senior Front-End Developer",
-  fullName: "Shaik Shakeel Ahmed",
+  greetingBadge: "6+ Years Experience • Dubai, United Arab Emirates",
+  fullName: "Shakeel Ahmed",
   roles: [
-    "Next.js & React.js Developer",
-    "Senior Front-End Engineer",
-    "UI Architecture Specialist",
+    "React JS Developer",
+    "Front End Developer",
+    "JavaScript",
+    "HTML5",
+    "CSS3",
   ],
   summary:
-    "Front-End Developer with over 6+ years of experience building SEO-friendly, scalable, and user-centric web applications using Next.js, React.js, TypeScript, Tailwind CSS, shadcn/ui, Zustand, and Redux.",
+    "Front End Developer with over 6+ years of experience building responsive, user-centric web applications using Next.js, React.js, TypeScript, Tailwind CSS, shadcn/ui, Zustand, JavaScript (ES6), HTML5, CSS3, SASS/SCSS, Bootstrap, and Redux.",
   profileImage,
-  profileImageAlt: "Shaik Shakeel Ahmed - Senior Front-End Developer",
+  profileImageAlt: "Shakeel Ahmed - React JS & Front End Developer",
   quickHighlights: [
-    { icon: "layers", text: "Next.js SSR & Component Architecture" },
-    { icon: "code", text: "React.js, TypeScript, Zustand & Redux" },
-    { icon: "checkCircle", text: "Tailwind CSS, shadcn/ui & Radix UI" },
+    { icon: "code", text: "Next.js, React.js & TypeScript" },
+    { icon: "layers", text: "Redux, Zustand & Context API" },
+    { icon: "checkCircle", text: "Tailwind CSS, shadcn/ui & Bootstrap" },
   ],
   primaryCta: {
-    label: "Explore Case Studies",
+    label: "View Projects",
     href: "#projects",
   },
   secondaryCta: {
@@ -104,58 +106,58 @@ export const HERO_DATA = {
 
 export const ABOUT_DATA = {
   sectionId: "about",
-  badge: "Executive Summary",
+  badge: "Summary",
   title: "About Me",
   subtitle:
-    "Bridging product vision and front-end engineering through scalable Next.js & React architectures, reusable component systems, and clean code.",
+    "Front End Developer with over 6+ years of experience building scalable, reusable, and performance-optimized user interfaces.",
   paragraphs: [
-    "Front-End Developer with over 6+ years of experience building responsive, user-centric web applications. Experienced in developing modern web solutions using Next.js, React.js, TypeScript, Tailwind CSS, shadcn/ui, Radix UI, Zustand, Redux, JavaScript (ES6+), HTML5, CSS3, SASS/SCSS, and Bootstrap.",
-    "Hands-on experience developing SEO-friendly and high-performance applications with Next.js (SSR, dynamic imports, lazy loading, Core Web Vitals), integrating REST APIs with Axios, and managing dynamic content with Contentful CMS, Mapbox, and Azure Blob Storage—including multilingual English/Arabic RTL support.",
-    "Proficient in translating UI/UX designs and wireframes into pixel-perfect interfaces, reusable component libraries, and mobile-first layouts across PropTech/Hospitality, Healthcare, EdTech, and E-Commerce domains within Agile/Scrum teams.",
+    "Front End Developer with over 6+ years of experience building responsive, user-centric web applications. Experienced in developing modern web solutions using Next.js, React.js, TypeScript, Tailwind CSS, shadcn/ui, Zustand, JavaScript (ES6), HTML5, CSS3, SASS/SCSS, Bootstrap, and Redux. Skilled in creating scalable, reusable, and performance-optimized user interfaces with a strong focus on user experience, accessibility, and maintainability.",
+    "Hands-on experience developing SEO-friendly and high-performance applications with Next.js, implementing responsive designs, integrating REST APIs, and managing application state. Experienced in working with Contentful CMS to create, update, and manage dynamic content, page sections, and reusable content components. Proficient in translating UI/UX designs and wireframes into pixel-perfect interfaces using modern front-end development practices.",
+    "Experienced in building reusable component libraries, interactive cards, and mobile-first layouts while ensuring cross-browser compatibility and optimal performance. Strong understanding of Git-based workflows and Agile/Scrum methodologies, with the ability to collaborate effectively across cross-functional teams and independently deliver high-quality features in fast-paced development environments. Passionate about learning new technologies, improving development processes, and delivering scalable front-end solutions that drive business value.",
   ],
   highlights: [
     {
       value: "6+",
       label: "Years of Experience",
-      detail: "May 2019 – Present",
+      detail: "Front-End Web Development",
     },
     {
       value: "4",
-      label: "Product & IT Companies",
+      label: "Companies",
       detail: "WeStay, Careersmith, Cognizant & CodeOn",
     },
     {
-      value: "20+",
+      value: "15+",
       label: "Core Technologies",
-      detail: "Next.js, React, TS, Tailwind & CMS",
+      detail: "Next.js, React.js, TypeScript & UI",
     },
     {
-      value: "EN/AR",
-      label: "Multilingual & RTL",
-      detail: "Accessible & Cross-Browser UI",
+      value: "100%",
+      label: "Responsive & Agile",
+      detail: "Cross-Browser & Mobile-First",
     },
   ],
   pillars: [
     {
-      id: "architecture",
+      id: "reusable-ui",
       icon: "layers",
-      title: "Scalable UI Architecture",
+      title: "Reusable Component Libraries",
       description:
-        "Designing reusable component libraries with Next.js, React.js, TypeScript, Tailwind CSS, shadcn/ui, Radix UI, Zustand, and Redux.",
+        "Building scalable, reusable UI components, interactive cards, and mobile-first layouts using Next.js, React.js, TypeScript, Tailwind CSS, shadcn/ui, and Radix UI.",
     },
     {
       id: "performance",
       icon: "code",
-      title: "SSR & Core Web Vitals",
+      title: "Performance & SEO Optimization",
       description:
-        "Optimizing SEO and load performance using Server-Side Rendering (SSR), dynamic imports, lazy loading, image optimization, and unit testing.",
+        "Developing SEO-friendly, high-performance applications with Next.js SSR, dynamic imports, lazy loading, image optimization, and Core Web Vitals.",
     },
     {
       id: "collaboration",
       icon: "tools",
-      title: "CMS & Enterprise Workflows",
+      title: "API, CMS & Agile Delivery",
       description:
-        "Integrating REST APIs, Contentful CMS, Mapbox, Azure Blob Storage, authentication, and multilingual English/Arabic RTL experiences in Agile teams.",
+        "Integrating REST APIs with Axios, managing dynamic content with Contentful CMS, and collaborating across UX and backend teams in Agile/Scrum workflows.",
     },
   ],
 };
@@ -163,23 +165,24 @@ export const ABOUT_DATA = {
 export const EXPERIENCE_DATA = {
   sectionId: "experience",
   badge: "Career Journey",
-  title: "Professional Experience & Impact",
+  title: "Experience",
   subtitle:
-    "Over 6+ years of progressive front-end engineering experience across Dubai and India (May 2019 – Present).",
+    "Over 6+ years of professional Front-End and React.js development experience.",
   timeline: [
     {
       id: "exp-westay",
-      role: "Frontend Developer — WeStay",
-      period: "Nov 2025 – Present",
+      company: "WeStay",
+      role: "Frontend Developer",
+      period: "November 2025 - Present",
+      location: "Dubai, United Arab Emirates",
       focus: "WeStay • Dubai, United Arab Emirates",
       summary:
-        "Developing customer-facing, Admin, and Catalogue applications using Next.js, React.js, TypeScript, Tailwind CSS, and Zustand for modern property management and hospitality workflows.",
+        "Developed customer-facing, Admin, and Catalogue applications using Next.js, React, TypeScript, Tailwind CSS, and Zustand. Integrated REST APIs using Axios, implementing CRUD operations, authentication, search, filtering, loading/error handling, and complex business workflows.",
       achievements: [
-        "Developed customer-facing, Admin, and Catalogue applications using Next.js, React, TypeScript, Tailwind CSS, and Zustand.",
-        "Integrated REST APIs using Axios, implementing CRUD operations, authentication, search, filtering, loading/error handling, and complex business workflows.",
-        "Built reusable and responsive UI components using Tailwind CSS, shadcn/ui, and Radix UI across property management, booking, customer, pricing, CMS, media, and approval/review workflows.",
-        "Integrated Contentful CMS, Mapbox, and Azure Blob Storage, and implemented multilingual English/Arabic RTL support.",
-        "Drove performance optimization using Server-Side Rendering (SSR), dynamic imports, lazy loading, image optimization, and Core Web Vitals enhancements.",
+        "Built reusable and responsive UI components using Tailwind CSS, shadcn/ui, and Radix UI.",
+        "Developed property management, booking, customer, pricing, CMS, media, and approval/review workflows.",
+        "Integrated Contentful CMS, Mapbox, Azure Blob Storage, and implemented multilingual English/Arabic RTL support.",
+        "Worked on performance optimization using SSR, dynamic imports, lazy loading, image optimization, and Core Web Vitals.",
       ],
       technologies: [
         "Next.js",
@@ -198,22 +201,22 @@ export const EXPERIENCE_DATA = {
     },
     {
       id: "exp-careersmith",
-      role: "React.js Developer — Careersmith Edu Tech Pvt Ltd",
-      period: "Jun 2024 – Jun 2025",
+      company: "Careersmith Edu Tech Pvt Ltd",
+      role: "React Js Developer",
+      period: "June 2024 - June 2025 (1 year 1 month)",
+      location: "Tirupati, Andhra Pradesh, India",
       focus: "Careersmith Edu Tech Pvt Ltd • Tirupati, Andhra Pradesh, India",
       summary:
-        "Engineered dynamic and responsive web applications using React.js, enhancing the user experience across multiple devices with reusable component libraries.",
+        "Engineered dynamic and responsive web applications using React JS, enhancing the user experience across multiple devices.",
       achievements: [
-        "Engineered dynamic, responsive web applications using React.js and modern JavaScript (ES6+), enhancing user experience across desktop and mobile devices.",
-        "Developed reusable UI components that improved code maintainability and optimized overall application rendering performance.",
-        "Integrated RESTful APIs in close collaboration with UX designers and backend teams to deliver seamless, data-driven user interfaces.",
-        "Ensured cross-browser compatibility, conducted rigorous unit testing to maintain high quality standards, and managed version control with Git in an Agile environment.",
+        "Developed reusable components that improved code maintainability and optimized overall application performance.",
+        "Integrated RESTful APIs and collaborated closely with UX and backend teams to ensure seamless and efficient user interfaces.",
+        "Ensured cross-browser compatibility and conducted rigorous unit testing to maintain high quality standards.",
+        "Followed Agile methodology and managed version control effectively using Git to facilitate smooth project workflows.",
       ],
       technologies: [
         "React.js",
-        "JavaScript (ES6+)",
-        "Redux",
-        "Context API",
+        "JavaScript (ES6)",
         "RESTful APIs",
         "Unit Testing",
         "Git",
@@ -222,48 +225,49 @@ export const EXPERIENCE_DATA = {
     },
     {
       id: "exp-cognizant",
-      role: "UI Developer — Cognizant",
-      period: "Feb 2021 – Jan 2024 (3 Years)",
+      company: "Cognizant",
+      role: "UI Developer",
+      period: "February 2021 - January 2024 (3 years)",
+      location: "India",
       focus: "Cognizant • India",
       summary:
-        "Developed high-quality user-facing features and reusable component libraries for enterprise platforms using React.js, JavaScript, HTML5, CSS3, SASS, and jQuery.",
+        "Developed high quality user facing features using JavaScript, HTML5, CSS3, SASS, jQuery, and React JS.",
       achievements: [
-        "Developed high-quality user-facing features using React.js, JavaScript, HTML5, CSS3, SASS, and jQuery for enterprise healthcare and clinical platforms.",
-        "Built reusable code and UI libraries to enhance application speed, maintainability, and cross-browser compatibility.",
-        "Collaborated closely with backend engineers to establish JSON-based REST APIs for seamless data integration, gathered requirements, and coordinated module delivery.",
-        "Conducted unit testing to verify module functionality and resolved complex UI/UX issues effectively across sprints.",
+        "Built reusable code and libraries to enhance application speed and ensure cross-browser compatibility.",
+        "Collaborated closely with backend engineers to establish JSON based APIs for seamless data integration.",
+        "Gathered requirements and coordinated with development teams to monitor and track module delivery.",
+        "Conducted unit testing to verify module functionality and resolve UI/UX issues effectively.",
       ],
       technologies: [
         "React.js",
         "JavaScript",
         "HTML5",
-        "CSS3 / SASS",
+        "CSS3",
+        "SASS",
         "jQuery",
-        "JSON / REST APIs",
-        "Bootstrap",
+        "JSON APIs",
         "Unit Testing",
       ],
     },
     {
       id: "exp-codeon",
-      role: "UI Developer — CodeOn Technologies",
-      period: "May 2019 – Nov 2020 (1 Year 7 Months)",
+      company: "CodeOn Technologies",
+      role: "UI Developer",
+      period: "May 2019 - November 2020 (1 year 7 months)",
+      location: "India",
       focus: "CodeOn Technologies • India",
       summary:
-        "Enhanced interactive web components and delivered pixel-perfect, responsive designs aligned with modern web standards.",
+        "Enhanced interactive web components using HTML5, CSS3, and jQuery, implementing animations that improved user experience through various jQuery plugins.",
       achievements: [
-        "Enhanced interactive web components using HTML5, CSS3, JavaScript, and jQuery, implementing smooth UI animations and interactive plugins.",
-        "Delivered pixel-perfect, mobile-first responsive designs aligned with modern web standards and cross-browser requirements.",
-        "Collaborated closely with UX designers and backend teams to ensure client expectations and project milestones were met effectively.",
+        "Delivered pixel-perfect, responsive designs aligned with modern web standards.",
+        "Collaborated closely with UX designers and backend teams to ensure client expectations were met effectively.",
       ],
       technologies: [
         "HTML5",
         "CSS3",
         "JavaScript",
         "jQuery",
-        "Bootstrap",
-        "Responsive Web Design",
-        "SVN / Git",
+        "Responsive Design",
       ],
     },
   ],
@@ -271,64 +275,63 @@ export const EXPERIENCE_DATA = {
 
 export const SKILLS_DATA = {
   sectionId: "skills",
-  badge: "Technical Arsenal",
+  badge: "Technical Skills",
   title: "Technical Skills",
   subtitle:
-    "Filterable breakdown of my Next.js & React.js ecosystem, UI libraries, state management tools, and cloud/CMS integrations.",
+    "My front-end development stack, state management libraries, and workflow tools.",
   categories: [
     {
       id: "frontend",
-      title: "Frontend & UI Frameworks",
+      title: "Frontend & UI Technologies",
       icon: "code",
       skills: [
-        { name: "Next.js (SSR & App Router)", level: 92 },
+        { name: "Next.js", level: 92 },
         { name: "React.js", level: 95 },
         { name: "TypeScript", level: 90 },
-        { name: "JavaScript (ES6+)", level: 95 },
+        { name: "JavaScript (ES6)", level: 95 },
         { name: "Tailwind CSS", level: 94 },
         { name: "shadcn/ui & Radix UI", level: 92 },
-        { name: "HTML5 & Semantic Web", level: 96 },
+        { name: "HTML5", level: 96 },
         { name: "CSS3 & SASS / SCSS", level: 94 },
-        { name: "Bootstrap 5", level: 95 },
+        { name: "Bootstrap", level: 95 },
         { name: "jQuery", level: 90 },
       ],
     },
     {
       id: "state-cms",
-      title: "State, APIs & Cloud / CMS",
+      title: "State Management, APIs & CMS",
       icon: "server",
       skills: [
+        { name: "Redux", level: 92 },
+        { name: "Context API", level: 95 },
         { name: "Zustand", level: 92 },
-        { name: "Redux & Redux Toolkit", level: 92 },
-        { name: "React Context API & Hooks", level: 95 },
         { name: "REST APIs & Axios", level: 95 },
         { name: "Contentful CMS", level: 90 },
-        { name: "Mapbox Integration", level: 86 },
-        { name: "Azure Blob Storage", level: 85 },
+        { name: "Mapbox & Azure Blob Storage", level: 86 },
       ],
     },
     {
-      id: "architecture",
-      title: "Architecture & Performance",
+      id: "tools",
+      title: "Tools & Workflow",
+      icon: "tools",
+      skills: [
+        { name: "Visual Studio Code", level: 96 },
+        { name: "Git & SVN", level: 94 },
+        { name: "Chrome DevTools", level: 92 },
+        { name: "Agile / Scrum", level: 95 },
+        { name: "Unit Testing", level: 88 },
+      ],
+    },
+    {
+      id: "practices",
+      title: "Web Standards & Optimization",
       icon: "layers",
       skills: [
         { name: "SSR, Lazy Loading & Core Web Vitals", level: 92 },
         { name: "Reusable Component Libraries", level: 95 },
         { name: "Multilingual (English/Arabic RTL)", level: 92 },
-        { name: "Responsive & Mobile-First Design", level: 96 },
-        { name: "Authentication & Role Workflows", level: 90 },
-      ],
-    },
-    {
-      id: "tools",
-      title: "Tools, Testing & Workflow",
-      icon: "tools",
-      skills: [
-        { name: "Git, GitHub & SVN", level: 94 },
-        { name: "Visual Studio Code", level: 96 },
-        { name: "Chrome DevTools & Profiling", level: 92 },
-        { name: "Unit Testing (Jest / RTL)", level: 88 },
-        { name: "Agile / Scrum Methodology", level: 95 },
+        { name: "Responsive & Mobile-First Layouts", level: 96 },
+        { name: "Cross-Browser Compatibility", level: 95 },
       ],
     },
   ],
@@ -336,10 +339,10 @@ export const SKILLS_DATA = {
 
 export const PROJECTS_DATA = {
   sectionId: "projects",
-  badge: "Case Studies",
+  badge: "Portfolio",
   title: "Featured Projects",
   subtitle:
-    "Explore production web applications and enterprise platforms I engineered across Dubai and India. Filter by technology or inspect each project's architecture.",
+    "Web applications and platforms I developed across property management, education, healthcare, and e-commerce.",
   filterCategories: [
     "All Projects",
     "Next.js",
@@ -351,7 +354,7 @@ export const PROJECTS_DATA = {
   items: [
     {
       id: "westay-platform",
-      title: "WeStay Property, Booking & Catalogue Suite",
+      title: "WeStay Customer, Admin & Catalogue Applications",
       category: "Next.js",
       filterTags: ["Next.js", "React.js"],
       stack: [
@@ -362,82 +365,83 @@ export const PROJECTS_DATA = {
         "shadcn/ui",
         "Radix UI",
         "Zustand",
+        "Axios",
         "Contentful CMS",
         "Mapbox",
         "Azure Blob Storage",
       ],
       description:
-        "A comprehensive hospitality and property platform comprising customer-facing booking portals, an internal Admin system, and Catalogue applications with English/Arabic RTL support.",
+        "Customer-facing, Admin, and Catalogue web applications built with Next.js, React, TypeScript, Tailwind CSS, and Zustand with multilingual English/Arabic RTL support.",
       highlights: [
-        "Developed end-to-end property management, booking, customer, pricing, CMS, media, and approval/review workflows using Next.js, TypeScript, and Zustand.",
-        "Integrated Contentful CMS for dynamic page sections, Mapbox for interactive property mapping, and Azure Blob Storage for media management.",
+        "Developed property management, booking, customer, pricing, CMS, media, and approval/review workflows.",
+        "Integrated Contentful CMS, Mapbox, Azure Blob Storage, and REST APIs using Axios with authentication, search, filtering, and CRUD operations.",
       ],
       architecture: [
-        "Built reusable, accessible UI primitives with Tailwind CSS, shadcn/ui, and Radix UI supporting seamless bidirectional English/Arabic (RTL) layouts.",
-        "Engineered Axios REST API layers handling authentication, complex search/filtering, CRUD operations, and resilient loading/error boundaries.",
-        "Optimized Core Web Vitals and SEO through Server-Side Rendering (SSR), dynamic imports, route-level lazy loading, and Next.js image optimization.",
+        "Built reusable and responsive UI components using Tailwind CSS, shadcn/ui, and Radix UI.",
+        "Implemented multilingual English/Arabic RTL support across customer and catalogue interfaces.",
+        "Optimized performance using SSR, dynamic imports, lazy loading, image optimization, and Core Web Vitals.",
       ],
       deliverables:
-        "Delivered high-performance customer, catalogue, and admin applications with multilingual RTL support and streamlined property approval workflows.",
+        "Delivered responsive, SEO-friendly customer, catalogue, and admin applications with seamless CMS and booking workflows.",
     },
     {
       id: "lms",
       title: "Learning Management System (LMS)",
       category: "EdTech",
       filterTags: ["React.js", "EdTech"],
-      stack: ["React.js", "JavaScript (ES6+)", "Context API", "REST APIs", "CSS3", "Bootstrap"],
+      stack: ["React.js", "JavaScript (ES6)", "Context API", "REST APIs", "CSS3", "Bootstrap"],
       description:
-        "An enterprise educational platform designed for institutions to author, manage, deliver, and track courses, assessments, and learner progress.",
+        "An educational platform designed for institutions to manage, deliver, and track courses, assessments, and learner progress.",
       highlights: [
-        "Engineered reusable React component hierarchies for course players, curriculum trees, and student progress dashboards.",
-        "Implemented responsive, accessible layouts supporting seamless learning across desktop, tablet, and mobile viewports.",
+        "Built reusable React components for course players, curriculum views, and student progress dashboards.",
+        "Implemented responsive layouts supporting seamless learning across desktop, tablet, and mobile devices.",
       ],
       architecture: [
-        "Modular component architecture separating presentation views from data-fetching and state containers.",
-        "Dynamic client-side filtering and progress state synchronization across multi-step training modules.",
-        "Optimized re-renders on large course catalogs using memoized list items and clean state boundaries.",
+        "Modular React components separating UI views from data-fetching and state management.",
+        "Dynamic client-side filtering and progress synchronization across training modules.",
+        "Cross-browser compatibility and unit-tested UI modules.",
       ],
       deliverables:
-        "Delivered a unified, mobile-ready learning interface that streamlined course navigation and improved student completion tracking.",
+        "Delivered a mobile-ready learning interface that streamlined course navigation and student progress tracking.",
     },
     {
       id: "clinical-trials",
       title: "Clinical Trials & Translational Science Portal",
       category: "Healthcare",
       filterTags: ["React.js", "Healthcare"],
-      stack: ["React.js", "JavaScript (ES6+)", "REST APIs", "SASS", "Bootstrap", "CSS3"],
+      stack: ["React.js", "JavaScript (ES6)", "REST APIs", "SASS", "Bootstrap", "CSS3"],
       description:
-        "A specialized Clinical and Translational Science (CTS) platform empowering clinical researchers and trainees to translate medical research into improved patient care.",
+        "A Clinical and Translational Science (CTS) web application helping clinical researchers and trainees manage medical research workflows.",
       highlights: [
-        "Developed data-driven React views for tracking clinical study protocols, milestones, and translational research workflows.",
-        "Standardized UI form controls, validation states, and tabular views for high-density clinical data.",
+        "Developed data-driven React views for tracking clinical study protocols, milestones, and research workflows.",
+        "Created reusable form controls, validation states, and tabular views for clinical data.",
       ],
       architecture: [
-        "Structured React state flows to manage complex multi-step clinical forms and researcher submissions.",
-        "Consistent visual design tokens and Bootstrap grid customizations tailored for medical research staff.",
-        "Cross-browser compatibility and strict UI reliability for healthcare institutional environments.",
+        "Structured React state to handle multi-step clinical forms and researcher submissions.",
+        "Responsive Bootstrap and SASS styling tailored for healthcare research teams.",
+        "Cross-browser compatibility and unit testing for reliable module delivery.",
       ],
       deliverables:
-        "Enabled clinical teams and trainees to navigate research programs and track study outcomes through an intuitive web interface.",
+        "Enabled clinical teams and trainees to navigate research programs and track study outcomes through an intuitive interface.",
     },
     {
       id: "sip",
       title: "Shared Investigator Platform (SIP)",
       category: "Healthcare",
       filterTags: ["Healthcare"],
-      stack: ["JavaScript", "jQuery", "JSON / REST APIs", "Bootstrap", "CSS3"],
+      stack: ["JavaScript", "jQuery", "JSON APIs", "Bootstrap", "CSS3"],
       description:
-        "A centralized multi-sponsor clinical trial platform connecting pharmaceutical sponsors directly with participating research sites and principal investigators.",
+        "A multi-sponsor clinical trial platform connecting pharmaceutical sponsors with participating research sites and investigators.",
       highlights: [
-        "Built interactive front-end modules for cross-organization communications, document exchange, and site profile management.",
-        "Maintained strict UI consistency across role-based dashboards used by sponsors, coordinators, and investigators.",
+        "Built interactive front-end modules for cross-organization communication, document exchange, and site profile management.",
+        "Maintained UI consistency across dashboards used by sponsors, coordinators, and investigators.",
       ],
       architecture: [
-        "Event-driven UI modules handling asynchronous data updates, modal workflows, and document status tracking.",
-        "Role-aware interface patterns simplifying complex regulatory and clinical trial site interactions.",
+        "Interactive UI modules handling asynchronous JSON API updates, modal workflows, and document tracking.",
+        "Role-based user interface views simplifying clinical trial site interactions.",
       ],
       deliverables:
-        "Reduced friction between trial sponsors and investigative sites by providing a unified, single-sign-on workspace.",
+        "Provided a unified workspace connecting clinical trial sponsors and investigative sites.",
     },
     {
       id: "gamessouk",
@@ -446,17 +450,17 @@ export const PROJECTS_DATA = {
       filterTags: ["E-Commerce"],
       stack: ["JavaScript", "jQuery", "Bootstrap", "CSS3", "HTML5"],
       description:
-        "A high-traffic online gaming retail store in Kuwait specializing in consoles, video games, and gaming accessories with real-time deals and catalog browsing.",
+        "An online gaming retail storefront specializing in consoles, video games, and gaming accessories with catalog browsing and deals.",
       highlights: [
-        "Designed mobile-first product discovery grids, category filters, and promotional campaign banners.",
-        "Enhanced storefront UI responsiveness and interactive cart/product preview experiences.",
+        "Designed mobile-first product discovery grids, category filters, and promotional banners.",
+        "Enhanced storefront UI responsiveness and interactive cart and product preview experiences.",
       ],
       architecture: [
-        "Responsive grid system optimized for rapid visual scanning of gaming SKUs, pricing badges, and stock status.",
-        "Lightweight DOM manipulation and optimized asset loading for fast mobile browsing.",
+        "Responsive grid layouts optimized for browsing gaming products, pricing badges, and stock status.",
+        "Interactive jQuery plugins and animations for smooth mobile and desktop browsing.",
       ],
       deliverables:
-        "Delivered an engaging, conversion-focused shopping experience tailored for gaming enthusiasts across desktop and mobile devices.",
+        "Delivered a responsive e-commerce shopping experience across desktop and mobile devices.",
     },
   ],
 };
@@ -466,13 +470,13 @@ export const CONTACT_DATA = {
   badge: "Get In Touch",
   title: "Contact & Collaboration",
   subtitle:
-    "Based in Dubai, UAE — looking for an experienced Next.js / React.js Front-End Developer? Copy my details with one click or send a direct message.",
+    "Based in Dubai, United Arab Emirates — feel free to copy my contact details or send a direct message.",
   directEmail: "shklhmdshaik@gmail.com",
   methods: [
     {
       id: "phone",
-      label: "Phone / WhatsApp (UAE)",
-      value: "+971 58 168 3831",
+      label: "Phone / WhatsApp",
+      value: "+971 0581683831",
       copyValue: "+971581683831",
       href: "tel:+971581683831",
       icon: "phone",
@@ -513,8 +517,8 @@ export const CONTACT_DATA = {
 };
 
 export const FOOTER_DATA = {
-  copyrightName: "Shaik Shakeel Ahmed",
+  copyrightName: "Shakeel Ahmed",
   rightsText: "All rights reserved.",
   tagline:
-    "Front-End Developer (Next.js, React.js & TypeScript) • Dubai, United Arab Emirates",
+    "React JS Developer | Front End Developer • Dubai, United Arab Emirates",
 };

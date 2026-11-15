@@ -27,8 +27,11 @@ function Experience() {
                     <Icon name="briefcase" size={19} />
                   </div>
                   <div>
-                    <h3 className="project-title mb-1">{item.role}</h3>
-                    <div className="timeline-focus">{item.focus}</div>
+                    <h3 className="project-title mb-1">{item.company}</h3>
+                    <div className="timeline-focus fw-semibold">
+                      {item.role}
+                      {item.location ? ` • ${item.location}` : ""}
+                    </div>
                   </div>
                 </div>
                 <span className="project-category-badge align-self-start align-self-md-center">
