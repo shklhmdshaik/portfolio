@@ -1,4 +1,4 @@
-import profileImage from "../assets/images/shakeel.jpg";
+import profileImage from "../assets/images/shakeel.jpeg";
 import brandLogo from "../assets/images/shakeel_logo.png";
 
 export const SITE_METADATA = {
