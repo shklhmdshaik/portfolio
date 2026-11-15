@@ -1,17 +1,25 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.a0c8d659.css",
-    "main.js": "/portfolio/static/js/main.35cd5ecf.js",
-    "static/js/453.438d9e50.chunk.js": "/portfolio/static/js/453.438d9e50.chunk.js",
-    "static/media/shakeel_logo.png": "/portfolio/static/media/shakeel_logo.4ccc971ef143b877ca7e.png",
+    "main.css": "/portfolio/static/css/main.d91d5149.css",
+    "main.js": "/portfolio/static/js/main.c591fe3c.js",
+    "static/js/513.61710068.chunk.js": "/portfolio/static/js/513.61710068.chunk.js",
+    "static/js/699.cd7b60e0.chunk.js": "/portfolio/static/js/699.cd7b60e0.chunk.js",
+    "static/js/613.dea7e543.chunk.js": "/portfolio/static/js/613.dea7e543.chunk.js",
+    "static/js/216.3e6ecbb9.chunk.js": "/portfolio/static/js/216.3e6ecbb9.chunk.js",
+    "static/js/453.052877a7.chunk.js": "/portfolio/static/js/453.052877a7.chunk.js",
     "static/media/shakeel.jpg": "/portfolio/static/media/shakeel.c0f6d0fb52b210d05b52.jpg",
+    "static/media/shakeel_logo.png": "/portfolio/static/media/shakeel_logo.fa18b8e773a75c50f506.png",
     "index.html": "/portfolio/index.html",
-    "main.a0c8d659.css.map": "/portfolio/static/css/main.a0c8d659.css.map",
-    "main.35cd5ecf.js.map": "/portfolio/static/js/main.35cd5ecf.js.map",
-    "453.438d9e50.chunk.js.map": "/portfolio/static/js/453.438d9e50.chunk.js.map"
+    "main.d91d5149.css.map": "/portfolio/static/css/main.d91d5149.css.map",
+    "main.c591fe3c.js.map": "/portfolio/static/js/main.c591fe3c.js.map",
+    "513.61710068.chunk.js.map": "/portfolio/static/js/513.61710068.chunk.js.map",
+    "699.cd7b60e0.chunk.js.map": "/portfolio/static/js/699.cd7b60e0.chunk.js.map",
+    "613.dea7e543.chunk.js.map": "/portfolio/static/js/613.dea7e543.chunk.js.map",
+    "216.3e6ecbb9.chunk.js.map": "/portfolio/static/js/216.3e6ecbb9.chunk.js.map",
+    "453.052877a7.chunk.js.map": "/portfolio/static/js/453.052877a7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a0c8d659.css",
-    "static/js/main.35cd5ecf.js"
+    "static/css/main.d91d5149.css",
+    "static/js/main.c591fe3c.js"
   ]
 }
