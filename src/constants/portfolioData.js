@@ -476,9 +476,9 @@ export const CONTACT_DATA = {
     {
       id: "phone",
       label: "Phone / WhatsApp",
-      value: "+971 0581683831",
-      copyValue: "+971581683831",
-      href: "tel:+971581683831",
+      value: "+971 0582828499",
+      copyValue: "+971582828499",
+      href: "tel:+971582828499",
       icon: "phone",
       isExternal: false,
       canCopy: true,
