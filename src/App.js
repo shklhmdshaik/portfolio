@@ -1,7 +1,7 @@
-import React, { Suspense, lazy, useMemo } from "react";
+import React, { useMemo } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-import { NAV_LINKS, UI_LABELS } from "./constants/portfolioData";
+import { NAV_LINKS } from "./constants/portfolioData";
 import { ThemeProvider } from "./context/ThemeContext";
 import { useScrollSpy } from "./hooks/useScrollSpy";
 import ErrorBoundary from "./components/common/ErrorBoundary";
@@ -9,20 +9,11 @@ import ScrollToTopButton from "./components/common/ScrollToTopButton";
 import PortfolioNavbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
+import Experience from "./components/Experience";
+import Skills from "./components/Skills";
+import Projects from "./components/Projects";
+import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-
-const Experience = lazy(() => import("./components/Experience"));
-const Skills = lazy(() => import("./components/Skills"));
-const Projects = lazy(() => import("./components/Projects"));
-const Contact = lazy(() => import("./components/Contact"));
-
-function SectionFallback() {
-  return (
-    <div className="container py-5 text-center" aria-live="polite">
-      <div className="section-loading-pill">{UI_LABELS.loadingFallback}</div>
-    </div>
-  );
-}
 
 function PortfolioLayout() {
   const sectionIds = useMemo(() => NAV_LINKS.map((item) => item.id), []);
@@ -39,12 +30,10 @@ function PortfolioLayout() {
       <main>
         <Hero />
         <About />
-        <Suspense fallback={<SectionFallback />}>
-          <Experience />
-          <Skills />
-          <Projects />
-          <Contact />
-        </Suspense>
+        <Experience />
+        <Skills />
+        <Projects />
+        <Contact />
       </main>
       <Footer />
       <ScrollToTopButton visible={showScrollTop} />

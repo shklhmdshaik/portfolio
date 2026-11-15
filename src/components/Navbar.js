@@ -12,10 +12,10 @@ function PortfolioNavbar({ activeId, onSelectSection, scrollProgress = 0 }) {
   const [expanded, setExpanded] = useState(false);
   const { isDark, toggleTheme } = useTheme();
 
-  const handleNavClick = (id) => {
+  const handleNavClick = (id, event) => {
     setExpanded(false);
     if (onSelectSection) {
-      onSelectSection(id);
+      onSelectSection(id, event);
     }
   };
 
@@ -44,7 +44,7 @@ function PortfolioNavbar({ activeId, onSelectSection, scrollProgress = 0 }) {
         <Container>
           <Navbar.Brand
             href={`#${NAV_LINKS[0]?.id || "home"}`}
-            onClick={() => handleNavClick(NAV_LINKS[0]?.id || "home")}
+            onClick={(e) => handleNavClick(NAV_LINKS[0]?.id || "home", e)}
             className="d-flex align-items-center gap-2"
           >
             <img
@@ -81,7 +81,7 @@ function PortfolioNavbar({ activeId, onSelectSection, scrollProgress = 0 }) {
                 <Nav.Link
                   key={navItem.id}
                   href={navItem.href}
-                  onClick={() => handleNavClick(navItem.id)}
+                  onClick={(e) => handleNavClick(navItem.id, e)}
                   className={activeId === navItem.id ? "active" : ""}
                 >
                   {navItem.label}

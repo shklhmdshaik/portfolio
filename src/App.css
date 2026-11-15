@@ -6,14 +6,14 @@
 }
 
 .section-block {
-  padding: 4.5rem 0;
-  scroll-margin-top: 76px;
+  padding: 1.5rem 0 4rem;
+  scroll-margin-top: 62px;
 }
 
 @media (max-width: 991.98px) {
   .section-block {
-    padding: 3.25rem 0;
-    scroll-margin-top: 70px;
+    padding: 1.25rem 0 3rem;
+    scroll-margin-top: 58px;
   }
 }
 
