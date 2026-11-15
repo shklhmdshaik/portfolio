@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.01897f07.css",
-    "main.js": "/portfolio/static/js/main.8ab1f640.js",
+    "main.js": "/portfolio/static/js/main.113e6f20.js",
     "static/js/453.438d9e50.chunk.js": "/portfolio/static/js/453.438d9e50.chunk.js",
     "static/media/shakeel.jpeg": "/portfolio/static/media/shakeel.f68d6fba55f127d89645.jpeg",
     "static/media/shakeel_logo.png": "/portfolio/static/media/shakeel_logo.fa18b8e773a75c50f506.png",
     "index.html": "/portfolio/index.html",
     "main.01897f07.css.map": "/portfolio/static/css/main.01897f07.css.map",
-    "main.8ab1f640.js.map": "/portfolio/static/js/main.8ab1f640.js.map",
+    "main.113e6f20.js.map": "/portfolio/static/js/main.113e6f20.js.map",
     "453.438d9e50.chunk.js.map": "/portfolio/static/js/453.438d9e50.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.01897f07.css",
-    "static/js/main.8ab1f640.js"
+    "static/js/main.113e6f20.js"
   ]
 }
